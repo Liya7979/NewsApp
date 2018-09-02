@@ -125,14 +125,14 @@ public class QueryUtils {
                     String author = "";
 
                     if (tagsArray.length() == 0) {
-                        author = null;
+                        author = "";
                     } else {
                         for (int j = 0; j < tagsArray.length(); j++) {
                             JSONObject firstObject = tagsArray.getJSONObject(j);
                             author += firstObject.getString("webTitle");
                         }
                     }
-                    listOfNews.add(new News(webTitle, author.toString(), date, topic, url));
+                    listOfNews.add(new News(webTitle, author, date, topic, url));
                 }
             } else {
                 listOfNews = null;
